@@ -12,8 +12,8 @@ void base::made(std::string file, std::vector<uint8_t> data)
 
     else
     {
-        for (auto x : data)
-            object.write((char*)(&x), sizeof(x));
+        for (auto location : data)
+            object.write((char*)(&location), sizeof(location));
     }
     object.close();
 }
